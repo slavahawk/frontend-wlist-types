@@ -8,5 +8,3 @@ export * from "./src/wineList";
 export * from "./src/wineListItem";
 export * from "./src/activeWineList";
 export * from "./src/globalTypes";
-
-

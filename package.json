@@ -6,8 +6,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "wlist-types": "^1.0.0"
-  }
+  "description": ""
 }
