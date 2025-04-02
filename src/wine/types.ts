@@ -104,7 +104,7 @@ export interface CreateWineRequest {
   alcoholByVolume: number;
   countryId: number;
   regionId?: number; // Optional
-  grapeIds: number[];
+  grapeData: {grapeId: number, position: number}[];
   interestingFacts?: string; // Optional
   organoleptic?: string; // Optional
   isHidden: boolean;
