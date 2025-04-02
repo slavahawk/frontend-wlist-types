@@ -29,41 +29,24 @@ interface Item {
   links: string[];
 }
 
-interface BaseData {
-  id: number;
-  name: string;
+
+interface DataWithItems {
+  data: Item[];
+  count: number;
 }
 
-interface DataWithItems<T> {
-  data: T;
-  items: Item[];
-}
+type DataCategory = {
+  [key: string]: DataWithItems;
+};
 
 export interface WineListActive {
-  categories: {
-    [key: string]: DataWithItems<{
-      id: WineCategoryEnum;
-      name: WineCategoryEnum;
-    }>;
-  };
-  countries: {
-    [key: string]: DataWithItems<BaseData>;
-  };
-  colours: {
-    [key: string]: DataWithItems<{ name: WineColourEnum }>;
-  };
-  sugarTypes: {
-    [key: string]: DataWithItems<{ name: SugarTypeEnum }>;
-  };
-  regions: {
-    [key: string]: DataWithItems<BaseData>;
-  };
-  grapes: {
-    [key: string]: DataWithItems<{ id: number; name: string }>;
-  };
-  bottleVolumes: {
-    [key: string]: DataWithItems<{ volume: number }>;
-  };
+  categories: DataCategory;
+  countries: DataCategory;
+  colours: DataCategory;
+  sugarTypes: DataCategory;
+  regions: DataCategory;
+  grapes: DataCategory;
+  bottleVolumes: DataCategory;
 }
 
 export interface ActiveListInfo {
