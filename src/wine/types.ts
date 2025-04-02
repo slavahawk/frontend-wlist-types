@@ -38,6 +38,11 @@ export type WineCategoryValueType = (typeof WineCategoryEnum)[WineCategoryType];
 export type WineColourValueType = (typeof WineColourEnum)[WineColourType];
 export type SugarTypeValueType = (typeof SugarTypeEnum)[SugarType];
 
+export interface GrapeData {
+  grapeId: number
+  position: number
+}
+
 export interface Wine {
   id: number;
   name: string;
@@ -49,7 +54,7 @@ export interface Wine {
   alcoholByVolume: number;
   countryId: number;
   regionId?: number;
-  grapeIds: number[];
+  grapeData: GrapeData[];
   originalImagePath: string;
   mediumImagePath: null | string;
   tinyImagePath: null | string;
@@ -104,7 +109,7 @@ export interface CreateWineRequest {
   alcoholByVolume: number;
   countryId: number;
   regionId?: number; // Optional
-  grapeData: {grapeId: number, position: number}[];
+  grapeData: GrapeData[];
   interestingFacts?: string; // Optional
   organoleptic?: string; // Optional
   isHidden: boolean;
