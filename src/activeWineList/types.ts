@@ -53,4 +53,5 @@ export interface ActiveListInfo {
   shopId: number;
   shopName: string;
   imagePath: string;
+  itemCount: number
 }
