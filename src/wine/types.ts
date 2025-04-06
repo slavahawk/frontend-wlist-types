@@ -55,6 +55,7 @@ export interface Wine {
   countryId: number;
   regionId?: number;
   grapeData: GrapeData[];
+  largeImagePath: string;
   originalImagePath: string;
   mediumImagePath: null | string;
   tinyImagePath: null | string;
